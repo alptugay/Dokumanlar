@@ -92,7 +92,6 @@ cron_configuration:
 ### Sysctl yapılandırmaları
 Güvenlik için uygulanan sysctl yapılandırmaları **/etc/sysctl.d/ahtapotbase.conf** dosyasına yazılır. Yeni bir parametre eklenmek istenirse aşağıdaki gibi eklenir.
 ```
-#Onemli not: Eger burdaki bir parametre baska bir host grubunda farklı olması gerekiyorsa, o parametre icin ayri bir task yaziniz.
 sysctl:
     settings:
         fs.suid_dumpable: 0
@@ -121,7 +120,7 @@ services:
 ```
 
 ### SSH yapılandırması
-SSH güvenliğini arttıkmak amacıyla **roles/base/vars/security.yml** dosyasında aşağıdaki parametreler ile cihaza bağlantılar kısıtlanabilir. Varsayılan olarak bir kısıtlama yoktur.
+SSH güvenliğini arttıkmak amacıyla **roles/base/vars/ssh.yml** dosyasında aşağıdaki parametreler ile cihaza bağlantılar kısıtlanabilir. Varsayılan olarak bir kısıtlama yoktur.
 ```
 ssh:
     AllowUsers: ""
